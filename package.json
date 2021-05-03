@@ -1,0 +1,38 @@
+{
+  "name": "@videsk/rollup-library-template",
+  "umdName": "file-share",
+  "version": "1.0.0",
+  "description": "Template to compile library with Rollup",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
+  },
+  "browser": "dist/name-library.min.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/videsk/rollup-library-template.git"
+  },
+  "keywords": [
+    "videsk",
+    "library"
+  ],
+  "author": "videsk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/videsk/rollup-library-template/issues"
+  },
+  "homepage": "https://github.com/videsk/rollup-library-template#readme",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^18.0.0",
+    "@rollup/plugin-node-resolve": "^11.2.1",
+    "rollup": "^2.42.4",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-terser": "^7.0.2"
+  }
+}
