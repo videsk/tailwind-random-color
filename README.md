@@ -8,7 +8,7 @@ Generate random color easily, using the TailwindCSS palette. You can easily defi
 
 To get a random color with default palette of Tailwind, simply:
 
-```
+```js
 new TailwindColor().pick();
 
 // Output (example)
@@ -17,7 +17,7 @@ new TailwindColor().pick();
 
 Else if you want certain colors and number range:
 
-```
+```js
 const colors = {
     colors: ['gray', 'indigo', 'red'],
     range: [1,4] // Between 100 and 400,
@@ -33,7 +33,7 @@ new TailwindColor(options).pick();
 
 Also, you will be able to add your own custom color like this:
 
-```
+```js
 const colors = new TailwindColor(); // With default colors
 colors.color('dark').add();
 colors.color(['beautiful', 'romantic']).add();
@@ -46,7 +46,7 @@ colors.pick();
 Also, you can set your customs colors without default tailwind palette or remove:
 
 **Add:**
-```
+```js
 const options = {
     colors: ['romantic', 'beautiful'],
     prefix: 'text'
@@ -57,7 +57,7 @@ new TailwindColor(options).pick();
 text-romantic-200
 ```
 **Remove:**
-```
+```js
 const colors = new TailwindColor();
 
 colors.color('green').remove();
