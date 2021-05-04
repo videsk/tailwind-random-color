@@ -18,7 +18,7 @@ new TailwindColor().pick();
 Else if you want certain colors and number range:
 
 ```js
-const colors = {
+const options = {
     colors: ['gray', 'indigo', 'red'],
     range: [1,4] // Between 100 and 400,
     prefix: 'bg' // Can be 'bg', 'text', etc.
