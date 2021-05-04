@@ -1,21 +1,22 @@
 {
-  "name": "@videsk/rollup-library-template",
-  "umdName": "file-share",
-  "version": "1.0.0",
-  "description": "Template to compile library with Rollup",
+  "name": "@videsk/tailwind-random-color",
+  "umdName": "TailwindColor",
+  "version": "0.1.0-beta",
+  "description": "Generate random tailwind colors with a custom palette range",
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "rollup -c",
-    "dev": "rollup -c -w"
+    "dev": "rollup -c -w",
+    "publish": "npm run build && npm publish --access public"
   },
-  "browser": "dist/name-library.min.js",
+  "browser": "dist/tailwind-random-color.min.js",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/videsk/rollup-library-template.git"
+    "url": "git+https://github.com/videsk/tailwind-random-color.git"
   },
   "keywords": [
     "videsk",
@@ -24,9 +25,9 @@
   "author": "videsk",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/videsk/rollup-library-template/issues"
+    "url": "https://github.com/videsk/tailwind-random-color/issues"
   },
-  "homepage": "https://github.com/videsk/rollup-library-template#readme",
+  "homepage": "https://github.com/videsk/tailwind-random-color#readme",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^18.0.0",
     "@rollup/plugin-node-resolve": "^11.2.1",

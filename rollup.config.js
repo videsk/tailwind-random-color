@@ -43,7 +43,7 @@ export default {
         {
             file: outputName(pkg.browser),
             format: 'umd',
-            name: 'FileShare',
+            name: 'TailwindColor',
             esModule: false,
             sourcemap: !production,
             strict: false,

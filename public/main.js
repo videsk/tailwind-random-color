@@ -1,1 +1,1 @@
-// Add code here to play with your library
+console.log(new TailwindColor().pick());

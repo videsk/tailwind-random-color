@@ -1,21 +1,69 @@
-# Rollup starter library template
+# Tailwind Random Color
 
-Use this Rollup configuration template with library projects. Is not recommended use with frameworks like Vue, Svelte, React or Angular, otherwise modify with your own Rollup configuration.
+Generate random color easily, using the TailwindCSS palette. You can easily define range colors defining palette (red, yellow, indigo, etc.) and number, like:
 
-The compiled files will be exported and minify in `umd`, `cjs` (CommonJS), and `esm` (ES Modules) format. Also, it's used Babel for maximize compatibility of your code in browsers.
+`bg-red-500`, `bg-yellow-500`, ...
 
-## Development
+# How to use
 
-```shell
-npm run dev
+To get a random color with default palette of Tailwind, simply:
+
+```
+new TailwindColor().pick();
+
+// Output (example)
+'bg-indigo-600'
 ```
 
-In development mode you will be able to play adding your code on `public/main.js`. Rollup automatically add a hot-reload on `bundle.js` file, where is the original library code. Remember, in dev mode only exports the UMD version (browsers).
+Else if you want certain colors and number range:
 
-## Production
+```
+const colors = {
+    colors: ['gray', 'indigo', 'red'],
+    range: [1,4] // Between 100 and 400,
+    prefix: 'bg' // Can be 'bg', 'text', etc.
+};
+new TailwindColor(options).pick();
 
-```shell
-npm run build
+// Output (example)
+'bg-gray-200'
 ```
 
+# Custom colors
 
+Also, you will be able to add your own custom color like this:
+
+```
+const colors = new TailwindColor(); // With default colors
+colors.color('dark').add();
+colors.color(['beautiful', 'romantic']).add();
+colors.pick();
+
+// Output (example)
+'bg-romantic-500'
+```
+
+Also, you can set your customs colors without default tailwind palette or remove:
+
+**Add:**
+```
+const options = {
+    colors: ['romantic', 'beautiful'],
+    prefix: 'text'
+};
+new TailwindColor(options).pick();
+
+// Output
+text-romantic-200
+```
+**Remove:**
+```
+const colors = new TailwindColor();
+
+colors.color('green').remove();
+colors.color(['red', 'green']).remove();
+```
+
+# Copyrights
+
+MIT License, develop by Videsk with ❤️.
